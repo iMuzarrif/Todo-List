@@ -10,6 +10,7 @@ function Navbar() {
             <li><a href="#">Home </a></li>
             <li><a href="#">Your Task</a></li>
             <li><a href="#">Comtact Us</a></li>
+            <li><a href="#">Theme</a></li>
         </ul>
     </nav>
   )

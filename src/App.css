@@ -1,0 +1,4 @@
+.customScrollbar::-webkit-scrollbar{
+    width: 18px;
+    color: white;
+}

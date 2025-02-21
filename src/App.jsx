@@ -93,18 +93,18 @@ function App() {
         </div>
 
 
-        <div className=" h-[7%]">
+        <div className=" h-[10%]">
           <hr className='w-8/9 mx-auto mt-3' />
           <h2 className=' text-center mt-1'>To do list</h2>
-          <input onChange={toggleFinished} className=' ml-6' type="checkbox" checked id="" /> Checkbox
+          <div className=" mb-2 ml-6"><input onChange={toggleFinished} type="checkbox" checked={finished} id="" /> Checkbox</div>
         </div>
 
 
-        <div className="todolistContainer -z-10  h-[67%] customScrollbar overflow-y-scroll">
+        <div className="todolistContainer -z-10  h-[68%] customScrollbar overflow-y-scroll">
           {todos.length === 0 && <div className='m-5  '>Set Your To Do</div>}
           {todos.map((items) => {
-            return (
-              <div className="  text-white todoList break-words  w-8/9 mx-auto my-3 flex justify-between">
+            return ((finished || !items.isCompleted)&&
+              <div className="  text-white todoList break-words w-8/9 mx-auto my-3 flex justify-between">
                 <div className="todo flex w-full gap-3 ">
                   <svg onClick={() => complete(items.id)} className='cursor-pointer invert' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="24" color="#000000" fill="none">
                     <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
